@@ -1,0 +1,233 @@
+/* Free Meal Train Kit — shared print stylesheet.
+   US Letter, ink-friendly, works in WeasyPrint and photocopies in grayscale. */
+
+@page {
+  size: letter;
+  margin: 0.55in 0.6in 0.6in 0.6in;
+}
+
+:root {
+  --ink: #2f2620;
+  --soft: #6b5d52;
+  --rust: #a8502f;
+  --sage: #5d7a5f;
+  --line: #b8a99c;
+  --faint: #eee6dc;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: var(--ink);
+  font-size: 10.5pt;
+  line-height: 1.35;
+}
+
+h1, h2, h3, .serif {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+/* ---------- header ---------- */
+
+.kit-head {
+  border-bottom: 2.5pt solid var(--rust);
+  padding-bottom: 5pt;
+  margin-bottom: 10pt;
+}
+
+.kit-head h1 {
+  font-size: 19pt;
+  color: var(--rust);
+  letter-spacing: 0.2pt;
+}
+
+.kit-head .subtitle {
+  color: var(--soft);
+  font-size: 10pt;
+  margin-top: 2pt;
+}
+
+/* ---------- generic ---------- */
+
+.lede {
+  font-size: 10.5pt;
+  color: var(--soft);
+  margin-bottom: 8pt;
+}
+
+.section-title {
+  font-size: 12.5pt;
+  color: var(--sage);
+  margin: 12pt 0 5pt 0;
+}
+
+.small {
+  font-size: 8.5pt;
+  color: var(--soft);
+}
+
+.tip {
+  background: var(--faint);
+  border-left: 3pt solid var(--sage);
+  padding: 5pt 8pt;
+  margin: 7pt 0;
+  font-size: 9.5pt;
+}
+
+.accent {
+  color: var(--rust);
+  font-weight: bold;
+}
+
+.field {
+  color: var(--soft);
+}
+
+/* ---------- checkboxes / write-in dots ---------- */
+
+.cb {
+  display: inline-block;
+  width: 10pt;
+  height: 10pt;
+  border: 1.2pt solid var(--ink);
+  vertical-align: -1.5pt;
+  margin-right: 3pt;
+}
+
+.dot {
+  display: inline-block;
+  width: 6pt;
+  height: 6pt;
+  border: 1pt solid var(--soft);
+  border-radius: 50%;
+  vertical-align: -0.5pt;
+}
+
+/* ---------- tables ---------- */
+
+table.grid {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 6pt;
+}
+
+table.grid th {
+  background: var(--faint);
+  border: 1pt solid var(--line);
+  padding: 4pt 5pt;
+  text-align: left;
+  font-size: 9pt;
+  color: var(--ink);
+}
+
+table.grid td {
+  border: 1pt solid var(--line);
+  padding: 4pt 5pt;
+  height: 22pt;
+  font-size: 9.5pt;
+}
+
+table.grid tr.shaded td {
+  background: #faf6f0;
+}
+
+/* ---------- cut sheets (labels & flags) ---------- */
+
+.cut-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10pt;
+  margin-top: 8pt;
+}
+
+.cut-item {
+  border: 1pt dashed var(--line);
+  padding: 8pt;
+  width: 3.55in;
+  height: 2.15in;
+}
+
+.scissors {
+  font-size: 8pt;
+  color: var(--soft);
+  border-bottom: 1pt dashed var(--line);
+  padding-bottom: 2pt;
+  margin-bottom: 6pt;
+}
+
+/* ---------- folded card ---------- */
+
+.fold-cell {
+  width: 50%;
+  padding: 10pt 12pt;
+  vertical-align: top;
+  border: 1.5pt solid var(--line);
+}
+
+/* ---------- guides ---------- */
+
+.guide {
+  max-width: none;
+}
+
+.guide h1 {
+  font-size: 17pt;
+  color: var(--rust);
+  margin-bottom: 1pt;
+}
+
+.guide .sheet-ref {
+  font-size: 10pt;
+  color: var(--soft);
+  font-style: italic;
+  margin-bottom: 9pt;
+  padding-bottom: 5pt;
+  border-bottom: 1.5pt solid var(--sage);
+}
+
+.guide h2 {
+  font-size: 12pt;
+  color: var(--sage);
+  margin: 10pt 0 3pt 0;
+}
+
+.guide p {
+  margin-bottom: 5pt;
+}
+
+.guide ul {
+  list-style: none;
+  margin: 3pt 0 6pt 0;
+}
+
+.guide li {
+  padding-left: 16pt;
+  text-indent: -16pt;
+  margin-bottom: 3pt;
+}
+
+.guide li::before {
+  content: "\2014  "; /* em-dash bullet, renders everywhere */
+  color: var(--sage);
+}
+
+.guide .warm-close {
+  margin-top: 12pt;
+  border-top: 2pt solid var(--rust);
+  padding-top: 7pt;
+  font-family: Georgia, serif;
+  font-style: italic;
+  color: var(--rust);
+}
+
+/* ---------- page break helpers ---------- */
+
+.pagebreak {
+  break-before: page;
+  page-break-before: always;
+}

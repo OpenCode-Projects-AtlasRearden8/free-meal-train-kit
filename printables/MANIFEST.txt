@@ -1,0 +1,27 @@
+Free Meal Train Kit -- printable PDF index
+Built: 2026-10-31
+
+Print on US Letter, 'Actual size'. Both sheets and guides are
+ink-friendly and photocopy fine in grayscale.
+
+SHEETS:
+  coordinator-sign-up.pdf
+  dietary-needs-grid.pdf
+  drop-off-instructions.pdf
+  delivery-day-log.pdf
+  portion-container-labels.pdf
+  allergen-flags.pdf
+  thank-you-note-starters.pdf
+  family-wrap-up.pdf
+
+CAPTAIN'S GUIDES (how to run the matching sheet):
+  guide-coordinator-sign-up.pdf
+  guide-dietary-needs-grid.pdf
+  guide-drop-off-instructions.pdf
+  guide-delivery-day-log.pdf
+  guide-portion-container-labels.pdf
+  guide-allergen-flags.pdf
+  guide-thank-you-note-starters.pdf
+  guide-family-wrap-up.pdf
+
+No signups, nothing online: everything here is a plain printable.
